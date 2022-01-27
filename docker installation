@@ -15,7 +15,7 @@ sudo apt-get update
 sudo apt-get install jenkins -y 
 sudo usermod -aG  docker jenkins
 sudo echo "jenkins:admin" | chpasswd
-sudo sed -i "/^[^#]*PasswordAuthentication[[:space:]]no/c\PasswordAuthentication yes" /etc/ssh/sshd_config
+sudo sed -i "/^[^#]*PasswordAuthentication[[:space:]]no/c\PasswordAuthentication no" /etc/ssh/sshd_config
 sudo systemctl start jenkins 
 sudo systemctl enable jenkins
 sudo systemctl status jenkins
